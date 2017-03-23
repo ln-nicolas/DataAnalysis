@@ -4,7 +4,7 @@
 #
 
 image_to_matrix <- function(directory) {
-
+test
 
 
   A # retourne la matrice A. la derniére ligne de la fonction
