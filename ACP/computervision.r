@@ -1,18 +1,20 @@
+library(pixmap)
+
 #
-#		Analyse de donnée
-# 	Computer vision
+#	LECTURE DES IMAGES
+#
+# chaque image (112x92) est représentée sur une matrice ligne (1x10304)
+# l'ensemble des 10 images est concaténé dans la matrice IMG (10x10304)
 #
 
-image_to_matrix <- function(directory) {
+IMG <- matrix()
+for (i in 101:110){
+	img <- read.pnm(paste("att_referenceFaceData/",".pgm",sep=toString(i)),cellres=1)@grey[0:112,0:92]
 
-  library(pixmap)
-  #Conversion une image
-#img<-read.pnm("att_referenceFaceData/101.pgm")
-#mat<-img@grey[0:112,0:92]
-#mat<-matrix(mat,nrow=1,byrow=TRUE)
-#mat
-
-
-  A # retourne la matrice A. la derniére ligne de la fonction
-    # est la valeur retournée par la fonction.
+	if(i == 101){
+		IMG = matrix(img, nrow=1, byrow=TRUE)
+	}
+	else{
+		IMG <- rbind(IMG, matrix(img, nrow=1, byrow=TRUE))
+	}
 }
