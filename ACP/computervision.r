@@ -3,6 +3,8 @@ library(pixmap)
 #
 #	LECTURE DES IMAGES
 #
+#	les images considérées sont celles du dossier 'att_referenceFaceData'
+#
 # chaque image (112x92) est représentée sur une matrice ligne (1x10304)
 # l'ensemble des 10 images est concaténé dans la matrice IMG (10x10304)
 #
